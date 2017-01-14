@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="io.bitfountain.ashishpatel.RecentList.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/songslist"
+        android:layout_weight="100"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/player_toolbar"
+        android:background="@color/secondary_color"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/player_toolbar">
+
+        <ImageView
+            android:id="@+id/selected_thumbnail"
+            android:layout_width="@dimen/avatar_size"
+            android:layout_height="@dimen/avatar_size"/>
+
+        <TextView
+            android:id="@+id/selected_title"
+            android:paddingLeft="8dp"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/player_state"
+            android:layout_gravity="right"
+            android:layout_width="@dimen/avatar_size"
+            android:layout_height="@dimen/avatar_size"/>
+    </android.support.v7.widget.Toolbar>
+</LinearLayout>
